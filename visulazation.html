@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lease Agreement</title>
+<link rel="stylesheet" type="text/css" href="css/home.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <div class='cso-image-div'>
+        </div>
+       
+    </header>
+    <div>
+        <h1 class='housesTitle'>Leasing statics</h1>
+        <div class="slideshow-container">
+
+
+            <!-- <div class="slideshow-container">
+            <div><h1>Leasing statics</h1></div> -->
+                <div class="mySlides">
+                    <div class="numbertext">1/6</div>
+                    <img src="./images/image1.jpeg" style="width:100%">
+                    <div class="text">annual rents by suburbs</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2/6</div>
+                    <img src="./images/image2.jpg" style="width:100%">
+                    <div class="text">annual rents by suburbs</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3/6</div>
+                    <img src="./images/image3.jpg" style="width:100%">
+                    <div class="text">annual rents by suburbs</div>
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">4/6</div>
+                    <img src="./images/image4.jpg" style="width:100%">
+                    <div class="text">Percentage of total expenses</div>
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">5/6</div>
+                    <img src="./images/image5.jpg" style="width:100%">
+                    <div class="text">Future construction in CBD market</div>
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">6/6</div>
+                    <img src="./images/image6.jpg" style="width:100%">
+                    <div class="text">CBD vacancy change</div>
+                </div>
+
+                <a class="prev" style="color:red" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" style="color:red" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+
+        </div>
+        <button onclick="location.href='home.html'"  type="button" class="btn btn-default btn-sm">
+            back
+            </button>
+
+    <!-- </div> -->
+    <footer>
+        <div>
+            <h4>Contact us</h4>
+        </div>
+    </footer>
+        <script>
+        
+        function myFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+    
+    
+</body>
+</html>
+
